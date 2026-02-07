@@ -127,7 +127,7 @@
 
       @keyframes fall {
         to {
-          transform: translateY(100vh) rotate(360deg);
+          transform: translateY(110vh) rotate(360deg); /* vh biar jatuh lewat layar bawah */
           opacity: 0;
         }
       }
@@ -218,7 +218,10 @@
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.top = "-20px";
         heart.style.fontSize = Math.random() * 20 + 10 + "px";
-        heart.style.duration = Math.random() * 3 + 2 + "s";
+
+        const duration = Math.random() * 3 + 2;
+        heart.style.animationDuration = duration + "s"; // Gunakan animationDuration + "s"
+
         heart.style.opacity = Math.random();
         document.body.appendChild(heart);
 
